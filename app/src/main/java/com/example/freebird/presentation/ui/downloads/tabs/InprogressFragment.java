@@ -1,4 +1,4 @@
-package com.example.freebird.tabs;
+package com.example.freebird.presentation.ui.downloads.tabs;
 
 import android.os.Bundle;
 
