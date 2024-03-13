@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FreeBird</string>
+    <string name="back">back</string>
+    <string name="downloads">Downloads</string>
+    <string name="happy_with_service">Happy with service?</string>
+    <string name="rate_us_5star_to_appreciate_us">Rate us 5star to appreciate us</string>
+    <string name="rate_us_now">Rate Us Now</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_all">Delete All</string>
+    <string name="go_to_files">Go to files</string>
+    <string name="remove">Remove</string>
+    <string name="delete">Delete</string>
+    <string name="_720p">720P</string>
+    <string name="_186_48_mb">186.48 Mb</string>
+    <string name="completed">Completed</string>
+</resources>
