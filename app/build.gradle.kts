@@ -49,6 +49,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
 
     // Navigation Component
     val nav_version = "2.7.7"
