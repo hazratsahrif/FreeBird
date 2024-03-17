@@ -48,7 +48,7 @@ public class DownloadsFragment extends Fragment {
 
 
     private void showPopup(View v) {
-        binding.toolbar.setPopupTheme(R.style.PopupMenu);
+        binding.layoutToolbar.toolbar.setPopupTheme(R.style.PopupMenu);
         popup = new PopupMenu(requireContext(), v, Gravity.CENTER_HORIZONTAL);
         Context wrapper = new ContextThemeWrapper(requireContext(), R.style.PopupMenu);
         popup = new PopupMenu(wrapper, v);

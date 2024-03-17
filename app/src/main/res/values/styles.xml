@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns2="http://schemas.android.com/apk/res-auto">
     <style name="custom_tab_style">
         <item name="tabIndicator">@drawable/custom_tab_indicator</item>
     </style>
@@ -18,5 +18,145 @@
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">4%</item>
+    </style>
+
+    <style name="DefaultButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/primary_yellow</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+<!--    <style name="My.TextInputLayout.FilledBox.Dense" parent="Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">-->
+<!--        <item name="materialThemeOverlay">@style/MyThemeOverlayFilledDense</item>-->
+<!--        <item name="endIconMode">dropdown_menu</item>-->
+<!--    </style>-->
+
+<!--    <style name="MyThemeOverlayFilledDense">-->
+<!--        <item name="autoCompleteTextViewStyle">@style/MyTextInputEditText_filledBox_dense</item>-->
+<!--        <item name="editTextStyle">@style/MyTextInputEditText_filledBox_dense</item>-->
+<!--    </style>-->
+
+<!--    <style name="MyTextInputEditText_filledBox_dense" parent="@style/Widget.Material3.AutoCompleteTextView.FilledBox.Dense">-->
+<!--        <item name="android:paddingStart" ns2:ignore="NewApi">0dp</item>-->
+<!--        <item name="android:paddingEnd" ns2:ignore="NewApi">0dp</item>-->
+<!--        <item name="android:paddingLeft">0dp</item>-->
+<!--        <item name="android:paddingRight">0dp</item>-->
+<!--    </style>-->
+
+    <!-- Text Styles -->
+    <style name="BodyHeading">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BoldStyle">
+        <item name="android:fontFamily">@font/sf_pro_text_bold</item>
+    </style>
+
+    <style name="MediumStyle">
+        <item name="android:fontFamily">@font/sf_pro_text_medium</item>
+    </style>
+
+    <style name="SemiBoldStyle">
+        <item name="android:fontFamily">@font/sf_pro_text_semibold</item>
+    </style>
+
+
+    <style name="Heading20_26Bold" parent="BoldStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading18_24Bold" parent="BoldStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading16_22Bold" parent="BoldStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading14_20Bold" parent="BoldStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading20_26Medium" parent="MediumStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Heading18_24Medium" parent="MediumStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Heading16_22Medium" parent="MediumStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Paragraph12_18Medium" parent="MediumStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="Heading20_26SemiBold" parent="SemiBoldStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading18_24SemiBold" parent="SemiBoldStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading16_22SemiBold" parent="SemiBoldStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Heading14_20SemiBold" parent="SemiBoldStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Paragraph14_20Regular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Paragraph12_18Regular">
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Heading14_20Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Paragraph10_16Regular">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">normal</item>
     </style>
 </resources>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/downloadsFragment">
+    app:startDestination="@id/feedbackFragment">
 
     <fragment android:id="@+id/placeholder" />
     <fragment
@@ -11,4 +11,14 @@
         android:name="com.example.freebird.presentation.ui.downloads.DownloadsFragment"
         android:label="fragment_downloads"
         tools:layout="@layout/fragment_downloads" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.freebird.presentation.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.example.freebird.presentation.ui.settings.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
 </navigation>

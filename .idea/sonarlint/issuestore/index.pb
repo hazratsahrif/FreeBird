@@ -24,3 +24,9 @@ G.idea/sonarlint/issuestore/d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d,5\9\59
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+l
+<app/src/main/java/com/example/freebird/SettingsFragment.java,c\9\c9fe66cc99bcf434816a5516a884a7608a64e889
+…
+Uapp/src/main/java/com/example/freebird/presentation/ui/settings/SettingsFragment.java,b\9\b9c15d5b144ffb89459485b4e79da21785af5188
+…
+Uapp/src/main/java/com/example/freebird/presentation/ui/settings/FeedbackFragment.java,e\1\e1013291e6410af7f57064e73971d439df7f0fef
