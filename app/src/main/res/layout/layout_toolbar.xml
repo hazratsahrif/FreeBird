@@ -46,6 +46,8 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:id="@+id/btnMore"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -53,6 +55,18 @@
                 android:contentDescription="@string/back"
                 android:src="@drawable/more"
                 app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnContactUs"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back"
+                android:src="@drawable/contact_us"
+                android:visibility="gone" />
+
 
 
         </RelativeLayout>
