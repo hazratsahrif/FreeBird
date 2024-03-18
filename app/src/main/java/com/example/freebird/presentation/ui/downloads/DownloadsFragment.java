@@ -14,6 +14,9 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.NavHostController;
+import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.freebird.R;
@@ -29,40 +32,35 @@ public class DownloadsFragment extends Fragment {
 
     FragmentDownloadsBinding binding;
     DownloadPagerAdapter myPagerAdapter;
-    PopupMenu popup;
+    NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentDownloadsBinding.inflate(getLayoutInflater());
-        initTabs();
 
-        binding.btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopup(v);
-            }
-        });
+
+        initTabs();
+        initData();
+        setOnClick();
         return binding.getRoot();
     }
 
+    private void setOnClick() {
+        binding.btnRateUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(getView()).navigate(R.id.action_downloadsFragment_to_rateUsBottomSheetFragment);
 
-    private void showPopup(View v) {
-        binding.layoutToolbar.toolbar.setPopupTheme(R.style.PopupMenu);
-        popup = new PopupMenu(requireContext(), v, Gravity.CENTER_HORIZONTAL);
-        Context wrapper = new ContextThemeWrapper(requireContext(), R.style.PopupMenu);
-        popup = new PopupMenu(wrapper, v);
-        popup.getMenuInflater().inflate(R.menu.donwnalod_menu, popup.getMenu());
-
-        popup.setOnMenuItemClickListener(item -> {
-            SpannableString s = new SpannableString(item.getTitle());
-            s.setSpan(new AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER), 0, s.length(), 0);
-            item.setTitle(s);
-            Toast.makeText(requireActivity(), "Text " + item.getTitle(), Toast.LENGTH_SHORT).show();
-            return true;
+            }
         });
-        popup.show();
     }
+
+    private void initData() {
+        binding.layoutToolbar.tvTitle.setText("Download");
+
+    }
+
 
     private void initTabs() {
         ViewPager2 viewPager = binding.vpLanding;
