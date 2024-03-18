@@ -66,3 +66,5 @@ capp/src/main/java/com/example/freebird/presentation/ui/history/adapters/OnHisto
 capp/src/main/java/com/example/freebird/presentation/ui/history/ClearHistoryBottomSheetFragment.java,0\b\0b35aee4a1b2e40c164dc3fb1e0b780283b663cf
 ‹
 [app/src/main/java/com/example/freebird/presentation/ui/downloads/tabs/CompleteFragment.java,2\6\267440a2dfc32f8eacf271c21ea52bb1efa60a2b
+€
+Papp/src/main/java/com/example/freebird/presentation/ui/auth/WelcomeFragment.java,7\2\72be2ff27220bb8bb54baf54fdf3de24532deeef
