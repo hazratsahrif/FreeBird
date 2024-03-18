@@ -21,13 +21,14 @@ import com.example.freebird.R;
 import com.example.freebird.Utils;
 import com.example.freebird.databinding.FragmentInprogressBinding;
 import com.example.freebird.presentation.ui.downloads.adapter.InprogressCardAdapter;
+import com.example.freebird.presentation.ui.downloads.model.CardModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class InprogressFragment extends Fragment {
     FragmentInprogressBinding binding;
-    List<com.example.freebird.model.CardModel> cardModelList;
+    List<CardModel> cardModelList;
     InprogressCardAdapter adapter;
     PopupMenu popup;
     Utils utils = new Utils();

@@ -1,4 +1,4 @@
-package com.example.freebird.model;
+package com.example.freebird.presentation.ui.downloads.model;
 
 public class CardModel {
     String title;

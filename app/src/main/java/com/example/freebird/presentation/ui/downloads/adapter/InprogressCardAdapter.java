@@ -1,16 +1,11 @@
 package com.example.freebird.presentation.ui.downloads.adapter;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.freebird.databinding.DownloadCardItemBinding;
 import com.example.freebird.databinding.InprogressCardItemBinding;
-import com.example.freebird.model.CardModel;
-
+import com.example.freebird.presentation.ui.downloads.model.CardModel;
 import java.util.List;
 
 public class InprogressCardAdapter extends RecyclerView.Adapter<InprogressCardAdapter.ViewHolder> {
