@@ -68,6 +68,10 @@
                 app:boxBackgroundColor="@color/grey800"
                 app:boxStrokeColor="@android:color/transparent"
                 app:boxStrokeWidth="0dp"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius"
                 app:counterEnabled="true"
                 app:counterMaxLength="500">
 

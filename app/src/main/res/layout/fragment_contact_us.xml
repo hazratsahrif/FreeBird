@@ -11,105 +11,264 @@
         android:id="@+id/toolbar"
         layout="@layout/layout_toolbar" />
 
-    <ScrollView
-        android:clipToPadding="false"
-        android:padding="20dp"
-        android:scrollbars="none"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:padding="20dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Heading18_24SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frequently asked questions" />
+
+                <include
+                    android:id="@+id/expandableLayout1"
+                    layout="@layout/layout_faq_expandable_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+                <include
+                    android:id="@+id/expandableLayout2"
+                    layout="@layout/layout_faq_expandable_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+                <include
+                    android:id="@+id/expandableLayout3"
+                    layout="@layout/layout_faq_expandable_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    style="@style/Heading18_24SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Contact Us" />
+
+                <TextView
+                    style="@style/Heading18_24Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Type Message" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/grey800"
+                    app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+                    app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+                    app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+                    app:boxCornerRadiusTopStart="@dimen/corner_radius"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="500">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+                        android:hint="Start typing"
+                        android:minHeight="100dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Send" />
+
+
+                <!--            <com.skydoves.expandablelayout.ExpandableLayout-->
+                <!--                android:id="@+id/expandable"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="12dp"-->
+                <!--                app:expandable_duration="300"-->
+                <!--                app:expandable_isExpanded="false"-->
+                <!--                app:expandable_parentLayout="@layout/layout_faq_expandable_parent_item"-->
+                <!--                app:expandable_secondLayout="@layout/layout_faq_expandable_child_item"-->
+                <!--                app:expandable_showSpinner="true"-->
+                <!--                app:expandable_spinner="@drawable/ic_arrow_down"-->
+                <!--                app:expandable_spinner_animate="true"-->
+                <!--                app:expandable_spinner_gravity="end"-->
+                <!--                app:expandable_spinner_size="40dp"-->
+                <!--                />-->
+
+                <!--            <com.skydoves.expandablelayout.ExpandableLayout-->
+                <!--                android:id="@+id/expandable2"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="12dp"-->
+                <!--                app:expandable_duration="300"-->
+                <!--                app:expandable_isExpanded="false"-->
+                <!--                app:expandable_parentLayout="@layout/layout_faq_expandable_parent_item"-->
+                <!--                app:expandable_secondLayout="@layout/layout_faq_expandable_child_item"-->
+                <!--                app:expandable_showSpinner="true"-->
+                <!--                app:expandable_spinner="@drawable/ic_arrow_down"-->
+                <!--                app:expandable_spinner_animate="true"-->
+                <!--                app:expandable_spinner_gravity="end"-->
+                <!--                app:expandable_spinner_size="40dp"-->
+                <!--                />-->
+                <!--            <com.skydoves.expandablelayout.ExpandableLayout-->
+                <!--                android:id="@+id/expandable3"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="12dp"-->
+                <!--                app:expandable_isExpanded="false"-->
+                <!--                app:expandable_parentLayout="@layout/layout_faq_expandable_parent_item"-->
+                <!--                app:expandable_secondLayout="@layout/layout_faq_expandable_child_item"-->
+                <!--                app:expandable_spinner_animate="true"-->
+                <!--                app:expandable_spinner_gravity="end"-->
+                <!--                />-->
+
+
+                <!--            <com.robertlevonyan.views.expandable.Expandable-->
+                <!--                android:id="@+id/expandableNew"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                app:exp_animateExpand="true"-->
+                <!--                app:exp_backgroundColor="@color/primary_yellow">-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Material expansion" />-->
+
+                <!--                    <com.google.android.material.divider.MaterialDivider-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="12dp" />-->
+
+                <!--                </LinearLayout>-->
+                <!--                &lt;!&ndash;                <include&ndash;&gt;-->
+                <!--                &lt;!&ndash;                    android:id="@+id/header"&ndash;&gt;-->
+                <!--                &lt;!&ndash;                    android:layout_gravity="center_vertical"&ndash;&gt;-->
+                <!--                &lt;!&ndash;                    layout="@layout/layout_faq_expandable_parent_item"&ndash;&gt;-->
+                <!--                &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+                <!--                &lt;!&ndash;                    android:layout_height="wrap_content" />&ndash;&gt;-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/content"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="lasdsadh haskj dhakjsd haJKSDH ajksdh AJKSDHkasj dhASJKD Hasd" />-->
+                <!--                </LinearLayout>-->
+                <!--            </com.robertlevonyan.views.expandable.Expandable>-->
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
+                android:id="@+id/textView4"
                 style="@style/Heading18_24SemiBold"
-                android:text="Frequently asked questions"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Contact Us trough"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <com.skydoves.expandablelayout.ExpandableLayout
-                android:id="@+id/expandable"
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:expandable_duration="300"
-                app:expandable_isExpanded="false"
-                app:expandable_parentLayout="@layout/layout_faq_expandable_parent_item"
-                app:expandable_secondLayout="@layout/layout_faq_expandable_child_item"
-                app:expandable_showSpinner="true"
-                app:expandable_spinner="@drawable/ic_arrow_down"
-                app:expandable_spinner_animate="true"
-                app:expandable_spinner_gravity="end"
-                app:expandable_spinner_size="40dp"
-                />
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:layout_editor_absoluteX="20dp" />
 
-            <com.skydoves.expandablelayout.ExpandableLayout
-                android:id="@+id/expandable2"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                app:expandable_duration="300"
-                app:expandable_isExpanded="false"
-                app:expandable_parentLayout="@layout/layout_faq_expandable_parent_item"
-                app:expandable_secondLayout="@layout/layout_faq_expandable_child_item"
-                app:expandable_showSpinner="true"
-                app:expandable_spinner="@drawable/ic_arrow_down"
-                app:expandable_spinner_animate="true"
-                app:expandable_spinner_gravity="end"
-                app:expandable_spinner_size="40dp"
-                />
-            <com.skydoves.expandablelayout.ExpandableLayout
-                android:id="@+id/expandable3"
-                android:layout_width="match_parent"
+                android:src="@drawable/chattext"
+                app:layout_constraintStart_toStartOf="@+id/materialDivider2"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider2" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:expandable_duration="300"
-                app:expandable_isExpanded="false"
-                app:expandable_parentLayout="@layout/layout_faq_expandable_parent_item"
-                app:expandable_secondLayout="@layout/layout_faq_expandable_child_item"
-                app:expandable_showSpinner="true"
-                app:expandable_spinner="@drawable/ic_arrow_down"
-                app:expandable_spinner_animate="true"
-                app:expandable_spinner_gravity="end"
-                app:expandable_spinner_size="40dp"
-                />
+                android:layout_marginStart="8dp"
+                android:text="yourmail@email.com"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/akar_icons_facebook_fill" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    app:srcCompat="@drawable/bi_linkedin" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/mdi_twitter" />
 
 
-            <!--            <com.robertlevonyan.views.expandable.Expandable-->
-            <!--                android:id="@+id/expandable"-->
-            <!--                app:exp_backgroundColor="@color/black"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content">-->
+            </LinearLayout>
 
-            <!--                <LinearLayout-->
-            <!--                    android:id="@+id/header"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    -->
-            <!--                    <TextView-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:text="What’s the best premium feature?"/>-->
-            <!--                    -->
-            <!--                </LinearLayout>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!--                <LinearLayout-->
-            <!--                    android:id="@+id/content"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
 
-            <!--                    <TextView-->
-            <!--                        android:text="lasdsadh haskj dhakjsd haJKSDH ajksdh AJKSDHkasj dhASJKD Hasd"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--            </com.robertlevonyan.views.expandable.Expandable>-->
-        </LinearLayout>
-    </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </LinearLayout>

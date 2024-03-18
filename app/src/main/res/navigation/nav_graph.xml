@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/settingsFragment">
+    app:startDestination="@id/premiumPackagesFragment">
 
-    <fragment android:id="@+id/placeholder" />
     <fragment
         android:id="@+id/downloadsFragment"
         android:name="com.example.freebird.presentation.ui.downloads.DownloadsFragment"
@@ -22,7 +21,14 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.freebird.presentation.ui.settings.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/feedbackFragment"
         android:name="com.example.freebird.presentation.ui.settings.FeedbackFragment"
@@ -43,4 +49,9 @@
         android:name="com.example.freebird.presentation.ui.settings.ContactUsFragment"
         android:label="fragment_contact_us"
         tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/premiumPackagesFragment"
+        android:name="com.example.freebird.presentation.ui.settings.PremiumPackagesFragment"
+        android:label="fragment_premium_packages"
+        tools:layout="@layout/fragment_premium_packages" />
 </navigation>

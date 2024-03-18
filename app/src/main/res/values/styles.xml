@@ -171,4 +171,10 @@
     <style name="BottomSheetAnimation" parent="@android:style/Animation">
 
     </style>
+
+    <style name="ButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/sf_pro_text_semibold</item>
+
+    </style>
 </resources>
