@@ -17,15 +17,20 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title here" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
+    <Switch
         android:id="@+id/switchAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/primary_yellow"
-        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:track="@drawable/custom_track"
+        android:checked="true"
+
+        android:thumbTint="@color/switch_thum_color"
+
+        android:thumb="@drawable/custom_thumb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

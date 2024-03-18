@@ -14,20 +14,18 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.PopupMenu;
-import android.widget.Toast;
-
 import com.example.freebird.R;
 import com.example.freebird.Utils;
 import com.example.freebird.adapter.HeaderAdapter;
 import com.example.freebird.databinding.FragmentCompleteBinding;
-import com.example.freebird.model.CardModel;
-import com.example.freebird.model.DownloadModel;
 import com.example.freebird.presentation.ui.downloads.adapter.CardAdapter;
+import com.example.freebird.presentation.ui.downloads.model.CardModel;
+import com.example.freebird.presentation.ui.downloads.model.DownloadModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class CompleteFragment extends Fragment {
     FragmentCompleteBinding binding;
