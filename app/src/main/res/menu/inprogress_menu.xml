@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/one"
-        android:title="@string/go_to_files"
+        android:title="@string/pause"
         app:showAsAction="always"
 
         />
     <item
         android:id="@+id/two"
-        android:title="@string/remove"/>
+        android:title="@string/delete"/>
     <item
         android:id="@+id/three"
-        android:title="@string/delete"/>
+        android:title="@string/go_to_files"/>
 </menu>

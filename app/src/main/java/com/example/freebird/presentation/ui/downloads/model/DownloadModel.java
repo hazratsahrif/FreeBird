@@ -1,4 +1,4 @@
-package com.example.freebird.model;
+package com.example.freebird.presentation.ui.downloads.model;
 
 import java.util.List;
 

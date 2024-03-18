@@ -55,6 +55,8 @@ dependencies {
     val nav_version = "2.7.7"
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
+    implementation("com.github.ome450901:SimpleRatingBar:1.5.1")
+
 
 
     implementation("com.robertlevonyan.view:MaterialExpansionPanel:2.1.8")

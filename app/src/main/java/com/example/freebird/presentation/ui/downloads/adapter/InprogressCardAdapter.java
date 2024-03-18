@@ -1,24 +1,19 @@
-package com.example.freebird.adapter;
-
+package com.example.freebird.presentation.ui.downloads.adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.freebird.databinding.DownloadCardItemBinding;
-import com.example.freebird.databinding.DownloadHeaderItemBinding;
-import com.example.freebird.model.CardModel;
-
+import com.example.freebird.databinding.InprogressCardItemBinding;
+import com.example.freebird.presentation.ui.downloads.model.CardModel;
 import java.util.List;
 
-public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
-    DownloadCardItemBinding binding;
+public class InprogressCardAdapter extends RecyclerView.Adapter<InprogressCardAdapter.ViewHolder> {
+    InprogressCardItemBinding binding;
     List<CardModel> list;
     Context context;
 
-    public CardAdapter(List<CardModel> list, Context context) {
+    public InprogressCardAdapter(List<CardModel> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -26,7 +21,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        binding = DownloadCardItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
+        binding = InprogressCardItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
         return  new ViewHolder(binding);
     }
 
@@ -41,8 +36,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        DownloadCardItemBinding binding;
-        public ViewHolder(@NonNull DownloadCardItemBinding binding) {
+        InprogressCardItemBinding binding;
+        public ViewHolder(@NonNull InprogressCardItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }

@@ -14,4 +14,16 @@
     <string name="_720p">720P</string>
     <string name="_186_48_mb">186.48 Mb</string>
     <string name="completed">Completed</string>
+    <string name="_124_28_mb_186_48mb">124.28 Mb/186.48Mb</string>
+    <string name="_2_42_mb_s">2.42 Mb/s</string>
+    <string name="how_to_watch_movies_for_720p_m4a">How to watch Movies for... 720P.m4a</string>
+    <string name="_6_downaloding">6 Downaloding</string>
+    <string name="stop_all">Stop All</string>
+    <string name="pause">Pause</string>
+    <string name="go_to_file">Go to file</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="we_need_">We need your support. By giving 5 star review the experience of using this app will be more smooth for you</string>
+    <string name="later">Later</string>
+    <string name="title">Title</string>
+    <string name="cancel">Cancel</string>
 </resources>
