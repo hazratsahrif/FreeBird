@@ -56,4 +56,9 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
 
+
+    implementation("com.robertlevonyan.view:MaterialExpansionPanel:2.1.8")
+
+    implementation("com.github.skydoves:expandablelayout:1.0.7")
+
 }
