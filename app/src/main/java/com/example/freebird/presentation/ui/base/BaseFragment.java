@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
-public abstract class BaseFragmentBaseFragment<VB extends ViewBinding> extends Fragment {
+public abstract class BaseFragment<VB extends ViewBinding> extends Fragment {
 
     public VB binding;
 
@@ -34,6 +34,7 @@ public abstract class BaseFragmentBaseFragment<VB extends ViewBinding> extends F
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         initializeViewBinding(inflater, container);
+
         initToolbar();
 //        snackBarManager.initializeSnackBarManager(inflater, _binding.getRoot());
         return binding.getRoot();

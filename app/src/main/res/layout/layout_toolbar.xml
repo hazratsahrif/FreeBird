@@ -46,6 +46,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/btnList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/list"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/delete"
+                    />
+
+
+            </LinearLayout>
+
             <ImageButton
                 android:id="@+id/btnMore"
                 android:visibility="gone"

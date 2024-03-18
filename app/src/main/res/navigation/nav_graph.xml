@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/premiumPackagesFragment">
+    app:startDestination="@id/historyFragment">
 
     <fragment
         android:id="@+id/downloadsFragment"
@@ -54,4 +54,18 @@
         android:name="com.example.freebird.presentation.ui.settings.PremiumPackagesFragment"
         android:label="fragment_premium_packages"
         tools:layout="@layout/fragment_premium_packages" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.freebird.presentation.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_clearHistoryBottomSheetFragment"
+            app:destination="@id/clearHistoryBottomSheetFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/clearHistoryBottomSheetFragment"
+        android:name="com.example.freebird.presentation.ui.history.ClearHistoryBottomSheetFragment"
+        android:label="fragment_clear_history_bottom_sheet"
+        tools:layout="@layout/fragment_clear_history_bottom_sheet" />
 </navigation>

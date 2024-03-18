@@ -3,9 +3,9 @@ package com.example.freebird.presentation.ui.settings;
 import android.view.View;
 
 import com.example.freebird.databinding.FragmentPremiumPackagesBinding;
-import com.example.freebird.presentation.ui.base.BaseFragmentBaseFragment;
+import com.example.freebird.presentation.ui.base.BaseFragment;
 
-public class PremiumPackagesFragment extends BaseFragmentBaseFragment<FragmentPremiumPackagesBinding> {
+public class PremiumPackagesFragment extends BaseFragment<FragmentPremiumPackagesBinding> {
 
     @Override
     public void initToolbar() {

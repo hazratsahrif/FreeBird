@@ -53,4 +53,16 @@
         <li>You can read our play store reviews.</li>
     </string>
 
+    <array name="topics">
+        <item>Downloader</item>
+        <item>Video player</item>
+    </array>
+
+    <array name="dates">
+        <item>Today</item>
+        <item>Last 24 hours</item>
+        <item>last 7 days</item>
+        <item>last 4 weeks</item>
+    </array>
+
 </resources>

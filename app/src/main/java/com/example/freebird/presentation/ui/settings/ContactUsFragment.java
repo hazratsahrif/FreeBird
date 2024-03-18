@@ -3,9 +3,9 @@ package com.example.freebird.presentation.ui.settings;
 import android.view.View;
 
 import com.example.freebird.databinding.FragmentContactUsBinding;
-import com.example.freebird.presentation.ui.base.BaseFragmentBaseFragment;
+import com.example.freebird.presentation.ui.base.BaseFragment;
 
-public class ContactUsFragment extends BaseFragmentBaseFragment<FragmentContactUsBinding> {
+public class ContactUsFragment extends BaseFragment<FragmentContactUsBinding> {
 
     @Override
     public void initToolbar() {
