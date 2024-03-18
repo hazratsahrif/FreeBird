@@ -18,7 +18,13 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater,container,false);
+        initData();
 
         return binding.getRoot();
+    }
+
+    private void initData() {
+        binding.toolbar.btnBack.setImageResource(R.drawable.hoem_icon);
+        binding.toolbar.notifyText.setVisibility(View.VISIBLE);
     }
 }
