@@ -11,5 +11,6 @@
     <color name="orange">#FF9441</color>
     <color name="grey">#cccccc</color>
     <color name="black20">#33010101</color>
+    <color name="input_text_color">#262626</color>
 
 </resources>

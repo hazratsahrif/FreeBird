@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/settingsFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment android:id="@+id/placeholder" />
     <fragment
@@ -38,4 +38,9 @@
         android:name="com.example.freebird.presentation.ui.downloads.DeleteBottomSheetFragment"
         android:label="fragment_delete_bottom_sheet"
         tools:layout="@layout/fragment_delete_bottom_sheet" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.freebird.presentation.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

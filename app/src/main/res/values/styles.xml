@@ -171,4 +171,16 @@
     <style name="BottomSheetAnimation" parent="@android:style/Animation">
 
     </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+
+        <item name="boxCornerRadiusBottomEnd">100dp</item>
+        <item name="boxCornerRadiusTopEnd">100dp</item>
+        <item name="boxCornerRadiusTopStart">100dp</item>
+        <item name="boxCornerRadiusBottomStart">100dp</item>
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
 </resources>
