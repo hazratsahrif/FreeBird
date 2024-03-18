@@ -58,4 +58,9 @@ dependencies {
     implementation("com.github.ome450901:SimpleRatingBar:1.5.1")
 
 
+
+    implementation("com.robertlevonyan.view:MaterialExpansionPanel:2.1.8")
+
+    implementation("com.github.skydoves:expandablelayout:1.0.7")
+
 }

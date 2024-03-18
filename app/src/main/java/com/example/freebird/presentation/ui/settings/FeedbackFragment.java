@@ -23,6 +23,7 @@ public class FeedbackFragment extends Fragment {
     }
 
     private void init() {
+        binding.toolbar.tvTitle.setText("Feedback");
 
     }
 }
