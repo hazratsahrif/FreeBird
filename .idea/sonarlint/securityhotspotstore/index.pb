@@ -68,3 +68,7 @@ capp/src/main/java/com/example/freebird/presentation/ui/history/ClearHistoryBott
 [app/src/main/java/com/example/freebird/presentation/ui/downloads/tabs/CompleteFragment.java,2\6\267440a2dfc32f8eacf271c21ea52bb1efa60a2b
 €
 Papp/src/main/java/com/example/freebird/presentation/ui/auth/WelcomeFragment.java,7\2\72be2ff27220bb8bb54baf54fdf3de24532deeef
+
+Oapp/src/main/java/com/example/freebird/presentation/ui/auth/SignInFragment.java,3\1\31410ef50a4af57068c2e25e38e8ea4a8c6e832e
+
+Oapp/src/main/java/com/example/freebird/presentation/ui/auth/SignUpFragment.java,f\b\fb3002cddcc22a0cd7d9d444a0449092fb6f4f8c

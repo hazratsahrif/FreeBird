@@ -65,4 +65,6 @@
         <item>last 4 weeks</item>
     </array>
 
+    <string name="sign_in_message">Sign In to enter <font color='#FF9441'>Download Hub</font> by syncing all your data.</string>
+
 </resources>
