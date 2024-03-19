@@ -42,7 +42,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <com.google.android.material.button.MaterialButton
-            style="@style/DefaultButtonStyle"
+            android:id="@+id/btnUpgradeToPremium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

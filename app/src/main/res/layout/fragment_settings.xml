@@ -23,7 +23,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/layout_upgrade_to_premium_card" />
+            <include
+                android:id="@+id/premiumHeader"
+                layout="@layout/layout_upgrade_to_premium_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <TextView
                 style="@style/BodyHeading"
