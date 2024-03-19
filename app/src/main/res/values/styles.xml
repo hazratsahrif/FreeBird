@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns2="http://schemas.android.com/apk/res-auto">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:ns1="http://schemas.android.com/apk/res/android" xmlns:ns2="http://schemas.android.com/apk/res-auto">
     <style name="custom_tab_style">
         <item name="tabIndicator">@drawable/custom_tab_indicator</item>
     </style>
@@ -187,6 +187,70 @@
         <item name="boxCornerRadiusBottomEnd">100dp</item>
         <item name="boxBackgroundColor">@color/grey800</item>
     </style>
+
+    <style name="My.TextInputLayout.FilledBox.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxBackgroundColor">@color/grey800</item>
+        <item name="materialThemeOverlay">@style/MyThemeOverlayFilledDense</item>
+    </style>
+
+    <style name="MyThemeOverlayFilledDense">
+        <item name="editTextStyle">@style/MyTextInputEditText_filledBox_dense
+        </item>
+    </style>
+
+    <style name="MyTextInputEditText_filledBox_dense" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart" ns2:ignore="NewApi">4dp</item>
+        <item name="android:paddingEnd" ns2:ignore="NewApi">4dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+    </style>
+
+    <style name="DefaultTextFieldStyle.Dense" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxBackgroundColor">@color/grey800</item>
+<!--        <item name="materialThemeOverlay">@style/TextInputEditTextOutlinedBoxDense</item>-->
+    </style>
+
+    <style name="TextInputEditTextOutlinedBoxDense">
+        <item name="editTextStyle">@style/TextInputEditTextOutlinedBoxDense.Dense</item>
+    </style>
+
+    <style name="TextInputEditTextOutlinedBoxDense.Dense" parent="WidgetMaterialComponentsTextInputEditTextOutlinedBoxDense" />
+
+    <style name="WidgetMaterialComponentsTextInputEditTextOutlinedBoxDense" parent="BaseWidgetMaterialComponentsTextInputEditText" tools:ignore="PrivateResource" />
+
+    <style name="BaseWidgetMaterialComponentsTextInputEditText" parent="Widget.Design.TextInputEditText">
+<!--        <item name="android:paddingStart" ns1:ignore="NewApi">10dp</item>-->
+<!--        <item name="android:paddingEnd" ns1:ignore="NewApi">10dp</item>-->
+<!--        <item name="android:paddingLeft">10dp</item>-->
+<!--        <item name="android:paddingRight">10dp</item>-->
+<!--        <item name="android:paddingTop">11dp</item>-->
+<!--        <item name="android:paddingBottom">11dp</item>-->
+<!--        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>-->
+<!--        <item name="textInputLayoutFocusedRectEnabled">true</item>-->
+<!--        <item name="android:paddingStart" ns1:ignore="NewApi">16dp</item>-->
+<!--        <item name="android:paddingEnd" ns1:ignore="NewApi">16dp</item>-->
+<!--        <item name="android:paddingLeft">16dp</item>-->
+<!--        <item name="android:paddingRight">16dp</item>-->
+<!--        <item name="android:paddingTop">17dp</item>-->
+<!--        <item name="android:paddingBottom">17dp</item>-->
+<!--        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>-->
+<!--        <item name="textInputLayoutFocusedRectEnabled">true</item>-->
+    </style>
+
+
+
     <style name="DefaultDropDownStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
         <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
         <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
