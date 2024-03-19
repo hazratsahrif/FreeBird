@@ -44,7 +44,8 @@ public class SignInFragment extends BaseFragment<FragmentSignInBinding> {
             @Override
             public void onClick(@NonNull View widget) {
                 // Handle click event here, e.g. start sign up activity
-                Toast.makeText(requireContext(), "Sign Up now clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(requireContext(), "Sign Up now clicked", Toast.LENGTH_SHORT).show();
+                findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToSignUpFragment());
             }
         };
         spannableString.setSpan(clickableSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
