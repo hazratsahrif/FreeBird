@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    app:strokeColor="@android:color/transparent"
+    app:strokeWidth="0dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="6dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:scaleType="fitXY"
+            android:id="@+id/ivCard"
+            android:layout_weight="0.35"
+            android:layout_height="88dp"
+            android:src="@drawable/img"
+
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0.64"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:maxLines="2"
+                    android:ellipsize="marquee"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_to_watch_movies_for_720p_m4a"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sf_pro_text_semibold"
+                    />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginTop="6dp"
+                        android:layout_width="match_parent"
+
+                        android:gravity="start"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="YouTube"
+                            android:drawablePadding="4dp"
+                            style="@style/MediumStyle"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kevin_stuart"
+                            android:textSize="12sp"
+                            android:textColor="@color/white60"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_19_april_2022"
+                        android:textSize="10sp"
+                        android:textColor="@color/white60"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="8dp"
+        app:dividerColor="@color/white16"
+        android:layout_height="1dp"/>
+
+
+</LinearLayout>

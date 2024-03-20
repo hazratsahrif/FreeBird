@@ -7,7 +7,7 @@ import com.example.freebird.databinding.FragmentContactUsBinding;
 import com.example.freebird.databinding.LayoutFaqExpandableParentItemBinding;
 import com.example.freebird.presentation.ui.base.BaseFragmentBaseFragment;
 
-public class ContactUsFragment extends BaseFragmentBaseFragment<FragmentContactUsBinding> {
+public class ContactUsFragment extends BaseFragmentBaseFragment<FragmentContactUsBinding>  {
 
     @Override
     public void initToolbar() {

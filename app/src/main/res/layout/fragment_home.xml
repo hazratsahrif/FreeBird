@@ -1,49 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".presentation.ui.home.HomeFragment">
 
-    <include layout="@layout/layout_toolbar"
-        android:id="@+id/toolbar"
-        ></include>
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:fillViewport="true"
-        android:layout_height="fill_parent">
-        <LinearLayout
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <include layout="@layout/layout_toolbar"
+            android:id="@+id/toolbar"
+            android:visibility="visible"
+            ></include>
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="20dp"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputLayout
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+            <LinearLayout
                 android:layout_width="match_parent"
-                app:boxBackgroundColor="@color/input_text_color"
-                style="@style/TextInputLayoutStyle"
-                app:endIconMode="custom"
-                app:endIconDrawable="@drawable/mice"
-                app:endIconTint="@color/white"
+                android:orientation="vertical"
+                android:isScrollContainer="true"
+                android:layout_margin="20dp"
                 android:layout_height="wrap_content">
-
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:padding="12dp"
-                    android:hint="Search or paste url"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white32"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:layout_height="wrap_content"/>
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
+                    app:boxBackgroundColor="@color/input_text_color"
+                    style="@style/TextInputLayoutStyle"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/mice"
+                    app:endIconTint="@color/white"
+                    android:layout_height="wrap_content">
 
-    </ScrollView>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:padding="12dp"
+                        android:hint="Search or paste url"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white32"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:id="@+id/rv"
+                    />
+
+                <include layout="@layout/home_header_item"
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    ></include>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/input_text_color"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rvRecent"
+                        />
 
 
 
-</LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <include layout="@layout/home_header_item"
+                    android:id="@+id/layoutFeature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    ></include>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:paddingEnd="50dp"
+                    android:layout_marginTop="18dp"
+                    android:paddingStart="0dp"
+                    android:id="@+id/viewPager" />
+
+                <include layout="@layout/premium_button"
+                    android:id="@+id/btnPremium"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="34dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rootLayout"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

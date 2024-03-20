@@ -1,4 +1,4 @@
-package com.example.freebird.adapter;
+package com.example.freebird.presentation.ui.downloads.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

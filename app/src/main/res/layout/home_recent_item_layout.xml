@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="16dp"
+
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/ivYoutube"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/youtube_red"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/ivYoutube"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/tvLink"
+        android:layout_toLeftOf="@id/btnClode"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white80"
+        android:ellipsize="marquee"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:text="https_www_youtube_com_watch...."
+        />
+
+    <ImageButton
+        android:id="@+id/btnClode"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:background="@android:color/transparent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/close_gray"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_marginTop="16dp"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tvLink"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

@@ -10,15 +10,29 @@
         <item name="fontFamily">@font/sf_pro_text_medium</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
+    <style name="NewTabCustomTabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/sf_pro_text_regular</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="fab_3_rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+
+    </style>
     <style name="PopupMenu" parent="Widget.Material3.PopupMenu">
         <item name="android:popupBackground">@drawable/custom_menu_bg</item>
-        <item name="android:divider">@color/black</item>
+        <item name="android:divider">@color/white</item>
         <item name="android:dividerHeight">1dp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">4%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App" parent="ShapeAppearanceOverlay.App.CornerSize50Percent">
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="DefaultButtonStyle" parent="Widget.MaterialComponents.Button">
@@ -63,7 +77,13 @@
         <item name="android:fontFamily">@font/sf_pro_text_semibold</item>
     </style>
 
+    <style name="AppBottomSheetTheme" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
 
+    <style name="AppModalStyle" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="behavior_peekHeight">400dp</item>
+    </style>
     <style name="Heading20_26Bold" parent="BoldStyle">
         <item name="android:textSize">20sp</item>
         <item name="android:lineSpacingExtra">6sp</item>

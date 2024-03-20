@@ -7,11 +7,15 @@
     <color name="white60">#99FFFFFF</color>
     <color name="white80">#CCFFFFFF</color>
     <color name="white32">#52FFFFFF</color>
+    <color name="white16">#29FFFFFF</color>
     <color name="green">#00AB30</color>
     <color name="orange">#FF9441</color>
     <color name="grey">#cccccc</color>
     <color name="black20">#33010101</color>
     <color name="input_text_color">#262626</color>
     <color name="grey800">#262626</color>
+    <color name="stroke_color">#14FFBA07</color>
+    <color name="_1c1c1c">#1C1C1C</color>
+    <color name="blue">#00A8FF</color>
 
 </resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginVertical="8dp"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:id="@+id/ivBookmark"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:layout_height="wrap_content"
+        android:src="@drawable/face_book"
+        />
+    <TextView
+        android:id="@+id/tvBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        android:textSize="12sp"
+        style="@style/MediumStyle"
+        android:layout_marginTop="4dp"
+        android:ellipsize="marquee"
+        android:maxLength="12"
+
+        />
+
+
+</LinearLayout>
