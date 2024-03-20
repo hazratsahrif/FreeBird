@@ -26,6 +26,48 @@
     <string name="later">Later</string>
     <string name="title">Title</string>
     <string name="cancel">Cancel</string>
+    <string name="premium_quality_downloads">
+        <ol>
+            <li>Download <font color='#FF9441'>Unlimited videos</font> from 1000+ Websites.\n</li>
+            <li><font color='#FF9441'>All Resolutions supported</font>: 1080P, 2K, 4K, 8K also in Full HD and more.\n</li>
+        </ol>
+    </string>
+
+    <string name="premium_quality_downloads1">
+            <li>Download <font color='#FF9441'>Unlimited videos</font> from 1000+ Websites.</li>
+    </string>
+    <string name="premium_quality_downloads2">
+            <li><font color='#FF9441'>All Resolutions supported</font>: 1080P, 2K, 4K, 8K also in Full HD and more</li>
+    </string>
+
+    <string name="no_more_ads1">
+        <li>Save your valuable time by removing ads.</li>
+    </string>
+    <string name="no_more_ads2">
+        <li>Enjoy the seamless experience that you deserve.</li>
+    </string>
+    <string name="best_video_downloader1">
+        <li>The best <font color='#FF9441'>Video Downloader</font> app that you will ever find on play store.</li>
+    </string>
+    <string name="best_video_downloader2">
+        <li>You can read our play store reviews.</li>
+    </string>
+
+    <array name="topics">
+        <item>Downloader</item>
+        <item>Video player</item>
+    </array>
+
+    <array name="dates">
+        <item>Today</item>
+        <item>Last 24 hours</item>
+        <item>last 7 days</item>
+        <item>last 4 weeks</item>
+    </array>
+
+    <string name="sign_in_message">Sign In to enter <font color='#FF9441'>Download Hub</font> by syncing all your data.</string>
+    <string name="sign_up_message">Sign up to create an account on <font color='#FF9441'>Download Hub</font> to sync your data.</string>
+
     <string name="https_www_youtube_com_watch">https://www.youtube.com/watch?</string>
     <string name="premium_quality_downloads">Premium Quality Downloads</string>
     <string name="download_unlimited_videos_from_1000_websites">•   Download <font color="#FFBA07">unlimited videos</font> from 1000+ websites.</string>

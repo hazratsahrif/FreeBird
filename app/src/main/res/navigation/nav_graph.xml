@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
+    app:startDestination="@id/historyFragment">
     app:startDestination="@id/homeFragment2">
 
-    <fragment android:id="@+id/placeholder" />
     <fragment
         android:id="@+id/downloadsFragment"
         android:name="com.example.freebird.presentation.ui.downloads.DownloadsFragment"
@@ -22,7 +22,29 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.freebird.presentation.ui.settings.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_settingsFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_settingsFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_premiumPackagesFragment"
+            app:destination="@id/premiumPackagesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/feedbackFragment"
         android:name="com.example.freebird.presentation.ui.settings.FeedbackFragment"
@@ -72,6 +94,65 @@
             app:destination="@id/availableDownloadBottomSheet" />
     </fragment>
     <dialog
+        android:id="@+id/deleteBottomSheetFragment"
+        android:name="com.example.freebird.presentation.ui.downloads.DeleteBottomSheetFragment"
+        android:label="fragment_delete_bottom_sheet"
+        tools:layout="@layout/fragment_delete_bottom_sheet" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.example.freebird.presentation.ui.settings.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/premiumPackagesFragment"
+        android:name="com.example.freebird.presentation.ui.settings.PremiumPackagesFragment"
+        android:label="fragment_premium_packages"
+        tools:layout="@layout/fragment_premium_packages" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.freebird.presentation.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_clearHistoryBottomSheetFragment"
+            app:destination="@id/clearHistoryBottomSheetFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/clearHistoryBottomSheetFragment"
+        android:name="com.example.freebird.presentation.ui.history.ClearHistoryBottomSheetFragment"
+        android:label="fragment_clear_history_bottom_sheet"
+        tools:layout="@layout/fragment_clear_history_bottom_sheet" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.freebird.presentation.ui.auth.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_welcomeFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.freebird.presentation.ui.auth.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.freebird.presentation.ui.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
         android:id="@+id/availableDownloadBottomSheet"
         android:name="com.example.freebird.presentation.ui.listing.tabs.AvailableDownloadBottomSheet"
         android:label="fragment_available_downalod_bottom_sheet"

@@ -2,6 +2,12 @@ package com.example.freebird.presentation.ui.downloads.tabs;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupMenu;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -9,12 +15,6 @@ import androidx.recyclerview.widget.ConcatAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.ContextThemeWrapper;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.PopupMenu;
 import com.example.freebird.R;
 import com.example.freebird.Utils;
 import com.example.freebird.adapter.HeaderAdapter;
@@ -45,13 +45,13 @@ public class CompleteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-         binding = FragmentCompleteBinding.inflate(getLayoutInflater());
-         downloadModelArrays = new ArrayList<>();
-         cardModels = new ArrayList<>();
-         recyclerView = binding.rv;
-         utils = new Utils();
-         initData();
-         setOnClickListner();
+        binding = FragmentCompleteBinding.inflate(getLayoutInflater());
+        downloadModelArrays = new ArrayList<>();
+        cardModels = new ArrayList<>();
+        recyclerView = binding.rv;
+        utils = new Utils();
+        initData();
+        setOnClickListner();
 
         return binding.getRoot();
     }
@@ -66,30 +66,30 @@ public class CompleteFragment extends Fragment {
     }
 
     private void initData() {
-      String textHeader1 = "Today";
-      String textHeader2 = "This Week";
-      String textHeader3 = "This Month";
-      cardModels = utils.getDownloadCardList(3);
-      headerAdapter1 = new HeaderAdapter(textHeader1,getContext());
-      headerAdapter2 = new HeaderAdapter(textHeader2,getContext());
-      headerAdapter3 = new HeaderAdapter(textHeader3,getContext());
-      cardAdapter1 = new CardAdapter(cardModels,getContext());
-      cardAdapter2 = new CardAdapter(cardModels,getContext());
-      cardAdapter3 = new CardAdapter(cardModels,getContext());
-      concatAdapter1 = new ConcatAdapter(
-              headerAdapter1,
-              cardAdapter1,
-              headerAdapter2,
-              cardAdapter2,
-              headerAdapter3,
-              cardAdapter3);
-      concatAdapter1.addAdapter(headerAdapter1);
-      concatAdapter1.addAdapter(cardAdapter1);
+        String textHeader1 = "Today";
+        String textHeader2 = "This Week";
+        String textHeader3 = "This Month";
+        cardModels = utils.getDownloadCardList(3);
+        headerAdapter1 = new HeaderAdapter(textHeader1, getContext());
+        headerAdapter2 = new HeaderAdapter(textHeader2, getContext());
+        headerAdapter3 = new HeaderAdapter(textHeader3, getContext());
+        cardAdapter1 = new CardAdapter(cardModels, getContext());
+        cardAdapter2 = new CardAdapter(cardModels, getContext());
+        cardAdapter3 = new CardAdapter(cardModels, getContext());
+        concatAdapter1 = new ConcatAdapter(
+                headerAdapter1,
+                cardAdapter1,
+                headerAdapter2,
+                cardAdapter2,
+                headerAdapter3,
+                cardAdapter3);
+        concatAdapter1.addAdapter(headerAdapter1);
+        concatAdapter1.addAdapter(cardAdapter1);
         concatAdapter1.addAdapter(headerAdapter2);
         concatAdapter1.addAdapter(cardAdapter2);
         concatAdapter1.addAdapter(headerAdapter3);
         concatAdapter1.addAdapter(cardAdapter3);
-        binding.rv.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+        binding.rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         binding.rv.setAdapter(concatAdapter1);
     }
 

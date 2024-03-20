@@ -41,41 +41,39 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/layoutActions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_marginRight="24dp"
-                android:id="@+id/notifyText"
-                android:visibility="gone"
                 android:layout_height="wrap_content">
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    app:strokeWidth="1.5dp"
-                    app:cardCornerRadius="6dp"
-                    app:strokeColor="@color/white"
-                    app:cardBackgroundColor="@android:color/transparent"
 
-                    />
-                <TextView
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/btnList"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
-                    android:textSize="12sp"
-                    android:layout_centerInParent="true"
-                    style="@style/MediumStyle"
+                    android:layout_marginEnd="16dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/list"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/delete"
                     />
 
-            </RelativeLayout>
 
-
-
-
-
+            </LinearLayout>
 
             <ImageButton
                 android:id="@+id/btnMore"
@@ -101,7 +99,7 @@
 
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
 

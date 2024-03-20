@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.freebird.databinding.FragmentSettingsBinding;
 
@@ -19,12 +20,18 @@ public class SettingsFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         init();
+        setListeners();
         return binding.getRoot();
     }
 
     private void init() {
         initToolbar();
+        initData();
 
+
+    }
+
+    private void initData() {
         binding.layoutDownloadLocation.tvTitle.setText("Download Location");
         binding.layoutDownloadLocation.tvSubtitle.setText("/Storage/emulated/0/Movies/DownloadHub");
 
@@ -50,14 +57,34 @@ public class SettingsFragment extends Fragment {
         binding.layoutConsent.tvTitle.setText("Consent");
         binding.layoutPrivacyPolicy.tvTitle.setText("Privacy Policy");
         binding.layoutContactUs.tvTitle.setText("Contact Us");
-
-
-
     }
 
     private void initToolbar() {
         binding.toolbar.tvTitle.setText("Settings");
         binding.toolbar.layoutActions.setVisibility(View.GONE);
+    }
+
+    private void setListeners() {
+        binding.layoutFeedback.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(SettingsFragmentDirections.actionSettingsFragmentToFeedbackFragment());
+            }
+        });
+
+        binding.layoutContactUs.getRoot().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(SettingsFragmentDirections.actionSettingsFragmentToContactUsFragment());
+            }
+        });
+
+        binding.premiumHeader.btnUpgradeToPremium.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(SettingsFragmentDirections.actionSettingsFragmentToPremiumPackagesFragment());
+            }
+        });
     }
 
     @Override

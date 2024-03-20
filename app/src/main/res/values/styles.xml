@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns2="http://schemas.android.com/apk/res-auto">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:ns1="http://schemas.android.com/apk/res/android" xmlns:ns2="http://schemas.android.com/apk/res-auto">
     <style name="custom_tab_style">
         <item name="tabIndicator">@drawable/custom_tab_indicator</item>
     </style>
@@ -23,16 +23,13 @@
     </style>
     <style name="PopupMenu" parent="Widget.Material3.PopupMenu">
         <item name="android:popupBackground">@drawable/custom_menu_bg</item>
-        <item name="android:divider">@color/white</item>
+        <item name="android:divider">@color/black</item>
         <item name="android:dividerHeight">1dp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">4%</item>
-    </style>
-    <style name="ShapeAppearanceOverlay.App" parent="ShapeAppearanceOverlay.App.CornerSize50Percent">
-        <item name="cornerSize">50%</item>
     </style>
 
     <style name="DefaultButtonStyle" parent="Widget.MaterialComponents.Button">
@@ -77,13 +74,7 @@
         <item name="android:fontFamily">@font/sf_pro_text_semibold</item>
     </style>
 
-    <style name="AppBottomSheetTheme" parent="Theme.MaterialComponents.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/AppModalStyle</item>
-    </style>
 
-    <style name="AppModalStyle" parent="Widget.MaterialComponents.BottomSheet">
-        <item name="behavior_peekHeight">400dp</item>
-    </style>
     <style name="Heading20_26Bold" parent="BoldStyle">
         <item name="android:textSize">20sp</item>
         <item name="android:lineSpacingExtra">6sp</item>
@@ -192,15 +183,132 @@
 
     </style>
 
-    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
-
-        <item name="boxCornerRadiusBottomEnd">100dp</item>
-        <item name="boxCornerRadiusTopEnd">100dp</item>
-        <item name="boxCornerRadiusTopStart">100dp</item>
-        <item name="boxCornerRadiusBottomStart">100dp</item>
-        <item name="boxStrokeColor">@color/white</item>
-        <item name="boxStrokeWidth">0dp</item>
-        <item name="boxStrokeWidthFocused">0dp</item>
-        <item name="hintEnabled">false</item>
+    <style name="ButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/sf_pro_text_semibold</item>
+        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="backgroundTint">@color/primary_yellow</item>
+        <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="DefaultTextFieldStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">100dp</item>
+        <item name="boxCornerRadiusTopEnd">100dp</item>
+        <item name="boxCornerRadiusBottomStart">100dp</item>
+        <item name="boxCornerRadiusBottomEnd">100dp</item>
+        <item name="boxBackgroundColor">@color/grey800</item>
+    </style>
+
+    <style name="My.TextInputLayout.FilledBox.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxBackgroundColor">@color/grey800</item>
+        <item name="materialThemeOverlay">@style/MyThemeOverlayFilledDense</item>
+    </style>
+
+    <style name="MyThemeOverlayFilledDense">
+        <item name="editTextStyle">@style/MyTextInputEditText_filledBox_dense
+        </item>
+    </style>
+
+    <style name="MyTextInputEditText_filledBox_dense" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart" ns2:ignore="NewApi">4dp</item>
+        <item name="android:paddingEnd" ns2:ignore="NewApi">4dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+    </style>
+
+    <style name="DefaultTextFieldStyle.Dense" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxBackgroundColor">@color/grey800</item>
+<!--        <item name="materialThemeOverlay">@style/TextInputEditTextOutlinedBoxDense</item>-->
+    </style>
+
+    <style name="TextInputEditTextOutlinedBoxDense">
+        <item name="editTextStyle">@style/TextInputEditTextOutlinedBoxDense.Dense</item>
+    </style>
+
+    <style name="TextInputEditTextOutlinedBoxDense.Dense" parent="WidgetMaterialComponentsTextInputEditTextOutlinedBoxDense" />
+
+    <style name="WidgetMaterialComponentsTextInputEditTextOutlinedBoxDense" parent="BaseWidgetMaterialComponentsTextInputEditText" tools:ignore="PrivateResource" />
+
+    <style name="BaseWidgetMaterialComponentsTextInputEditText" parent="Widget.Design.TextInputEditText">
+<!--        <item name="android:paddingStart" ns1:ignore="NewApi">10dp</item>-->
+<!--        <item name="android:paddingEnd" ns1:ignore="NewApi">10dp</item>-->
+<!--        <item name="android:paddingLeft">10dp</item>-->
+<!--        <item name="android:paddingRight">10dp</item>-->
+<!--        <item name="android:paddingTop">11dp</item>-->
+<!--        <item name="android:paddingBottom">11dp</item>-->
+<!--        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>-->
+<!--        <item name="textInputLayoutFocusedRectEnabled">true</item>-->
+<!--        <item name="android:paddingStart" ns1:ignore="NewApi">16dp</item>-->
+<!--        <item name="android:paddingEnd" ns1:ignore="NewApi">16dp</item>-->
+<!--        <item name="android:paddingLeft">16dp</item>-->
+<!--        <item name="android:paddingRight">16dp</item>-->
+<!--        <item name="android:paddingTop">17dp</item>-->
+<!--        <item name="android:paddingBottom">17dp</item>-->
+<!--        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>-->
+<!--        <item name="textInputLayoutFocusedRectEnabled">true</item>-->
+    </style>
+
+
+
+    <style name="DefaultDropDownStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+        <item name="boxBackgroundColor">@color/grey800</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="materialThemeOverlay">
+            @style/AutoCompleteTextViewOutlinedBoxDense
+        </item>
+    </style>
+
+    <style name="AutoCompleteTextViewOutlinedBoxDense">
+        <item name="autoCompleteTextViewStyle">
+            @style/AutoCompleteTextViewOutlinedBoxDensePadding
+        </item>
+    </style>
+
+    <style name="AutoCompleteTextViewOutlinedBoxDensePadding">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="background">@color/grey800</item>
+        <item name="android:popupBackground">@color/grey700</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme2"
+        parent="Theme.Material3.Dark.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Material3.BottomSheet.Modal">
+<!--        <item name="android:background">@drawable/rounded_dialog</item>-->
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="Theme.FreeBird">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/corner_radius</item>
+        <item name="cornerSizeTopLeft">@dimen/corner_radius</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+
+
 </resources>
