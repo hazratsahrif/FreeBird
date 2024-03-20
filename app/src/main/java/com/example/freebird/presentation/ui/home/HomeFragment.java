@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.freebird.R;
 import com.example.freebird.Utils;
+import com.example.freebird.presentation.ui.base.BaseFragment;
 import com.example.freebird.presentation.ui.base.BaseFragmentBaseFragment;
 import com.example.freebird.presentation.ui.downloads.adapter.CardAdapter;
 import com.example.freebird.presentation.ui.downloads.model.CardModel;
@@ -36,7 +37,7 @@ import com.example.freebird.presentation.ui.listing.adapter.AvailableCardAdapter
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends BaseFragmentBaseFragment<com.example.freebird.databinding.FragmentHomeBinding> implements BookMarkAdapter.OnClickButton, AvailableCardAdapter.OnClickItem {
+public class HomeFragment extends BaseFragment<com.example.freebird.databinding.FragmentHomeBinding> implements BookMarkAdapter.OnClickButton, AvailableCardAdapter.OnClickItem {
 
     BookMarkAdapter adapter;
     List<BookmarkItem> list;
@@ -167,7 +168,7 @@ public class HomeFragment extends BaseFragmentBaseFragment<com.example.freebird.
     public void onClick(int pos) {
         popupWindow.dismiss();
         if(pos==5){
-            Navigation.findNavController(getView()).navigate(R.id.action_homeFragment2_to_windowFragment);
+
         }
 
 

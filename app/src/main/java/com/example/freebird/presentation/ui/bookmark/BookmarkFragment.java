@@ -27,5 +27,6 @@ public class BookmarkFragment extends Fragment {
     private void initToolbar() {
         binding.toolbar.tvTitle.setText(getString(R.string.bookmarks));
 
+
     }
 }
