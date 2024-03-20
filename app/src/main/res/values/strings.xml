@@ -26,4 +26,28 @@
     <string name="later">Later</string>
     <string name="title">Title</string>
     <string name="cancel">Cancel</string>
+    <string name="https_www_youtube_com_watch">https://www.youtube.com/watch?</string>
+    <string name="premium_quality_downloads">Premium Quality Downloads</string>
+    <string name="download_unlimited_videos_from_1000_websites">•   Download <font color="#FFBA07">unlimited videos</font> from 1000+ websites.</string>
+    <string name="all_res">•    All Resolution supported</string>
+    <string name="google_com">Google.com</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="kevin_stuart">Kevin Stuart</string>
+    <string name="_19_april_2022">19 April, 2022</string>
+    <string name="available_downloads">Available Downloads</string>
+    <string name="add_to_playlist">Add to playlist</string>
+    <string name="title_activity_home_menu">HomeMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="manage_account">Manage Account</string>
+
+
 </resources>

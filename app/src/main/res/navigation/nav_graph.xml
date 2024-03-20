@@ -3,14 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/feedbackFragment">
+    app:startDestination="@id/homeFragment2">
 
     <fragment android:id="@+id/placeholder" />
     <fragment
         android:id="@+id/downloadsFragment"
         android:name="com.example.freebird.presentation.ui.downloads.DownloadsFragment"
         android:label="fragment_downloads"
-        tools:layout="@layout/fragment_downloads" />
+        tools:layout="@layout/fragment_downloads" >
+        <action
+            android:id="@+id/action_downloadsFragment_to_rateUsBottomSheetFragment"
+            app:destination="@id/rateUsBottomSheetFragment"/>
+        <action
+            android:id="@+id/action_downloadsFragment_to_deleteBottomSheetFragment"
+            app:destination="@id/deleteBottomSheetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.freebird.presentation.ui.settings.SettingsFragment"
@@ -21,4 +28,69 @@
         android:name="com.example.freebird.presentation.ui.settings.FeedbackFragment"
         android:label="fragment_feedback"
         tools:layout="@layout/fragment_feedback" />
+    <dialog
+        android:id="@+id/deleteBottomSheetFragment"
+        android:name="com.example.freebird.presentation.ui.downloads.DeleteBottomSheetFragment"
+        android:label="fragment_delete_bottom_sheet"
+        tools:layout="@layout/fragment_delete_bottom_sheet" />
+    <fragment
+        android:id="@+id/completeFragment"
+        android:name="com.example.freebird.presentation.ui.downloads.tabs.CompleteFragment"
+        android:label="fragment_complete"
+        tools:layout="@layout/fragment_complete" />
+    <fragment
+        android:id="@+id/inprogressFragment"
+        android:name="com.example.freebird.presentation.ui.downloads.tabs.InprogressFragment"
+        android:label="fragment_inprogress"
+        tools:layout="@layout/fragment_inprogress" />
+    <dialog
+        android:id="@+id/rateUsBottomSheetFragment"
+        android:name="com.example.freebird.presentation.ui.downloads.RateUsBottomSheetFragment"
+        android:label="fragment_rate_us_bottom_sheet"
+        tools:layout="@layout/fragment_rate_us_bottom_sheet" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.freebird.presentation.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_windowFragment"
+            app:destination="@id/windowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/windowFragment"
+        android:name="com.example.freebird.presentation.ui.home.window.WindowFragment"
+        android:label="fragment_window"
+        tools:layout="@layout/fragment_window" />
+    <fragment
+        android:id="@+id/listingFragment"
+        android:name="com.example.freebird.presentation.ui.listing.ListingFragment"
+        android:label="fragment_listing"
+        tools:layout="@layout/fragment_listing" >
+        <action
+            android:id="@+id/action_listingFragment_to_availableDownloadBottomSheet"
+            app:destination="@id/availableDownloadBottomSheet" />
+    </fragment>
+    <dialog
+        android:id="@+id/availableDownloadBottomSheet"
+        android:name="com.example.freebird.presentation.ui.listing.tabs.AvailableDownloadBottomSheet"
+        android:label="fragment_available_downalod_bottom_sheet"
+        tools:layout="@layout/fragment_available_downalod_bottom_sheet" />
+    <fragment
+        android:id="@+id/videoTabFragment"
+        android:name="com.example.freebird.presentation.ui.listing.tabs.video.VideoTabFragment"
+        android:label="fragment_video_tab"
+        tools:layout="@layout/fragment_video_tab" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/allTabFragment"
+        android:name="com.example.freebird.presentation.ui.listing.tabs.all.AllTabFragment"
+        android:label="fragment_all_tab"
+        tools:layout="@layout/fragment_all_tab" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.example.freebird.presentation.ui.settings.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
 </navigation>

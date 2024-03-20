@@ -20,8 +20,9 @@ import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.freebird.R;
-import com.example.freebird.adapter.DownloadPagerAdapter;
+
 import com.example.freebird.databinding.FragmentDownloadsBinding;
+import com.example.freebird.presentation.ui.downloads.adapter.DownloadPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -38,8 +39,6 @@ public class DownloadsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentDownloadsBinding.inflate(getLayoutInflater());
-
-
         initTabs();
         initData();
         setOnClick();

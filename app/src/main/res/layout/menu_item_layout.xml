@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/itemLayout"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/ivIcon"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_menu"
+        app:tint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove Ads"
+        android:id="@+id/tvTitle"
+        android:layout_marginLeft="12dp"
+        android:textSize="16sp"
+        style="@style/MediumStyle"
+        />
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        app:dividerColor="@color/white16"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
